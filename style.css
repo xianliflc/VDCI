@@ -1,0 +1,117 @@
+.turntable a.turntable-btn{
+    border: none;
+}
+
+.turntable ul,
+.turntable li {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.turntable {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 16px solid #0a85c1;
+    box-shadow: 0 2px 3px #333333, 0 0 2px #000000;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.turntable-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-clip: padding-box;
+    background-color: #ffcb3f;
+    -webkit-transition: all 6s ease;
+    transition: all 6s ease
+}
+
+.turntable-container canvas {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%
+}
+
+.turntalbe-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    z-index: 2
+}
+
+.turntable-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #0a85c1;
+    font-weight: bold;
+
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6)
+}
+
+.turntable-item span {
+    position: relative;
+    display: block;
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-transform-origin: 50% 150px;
+    -ms-transform-origin: 50% 150px;
+    transform-origin: 50% 150px
+}
+
+.turntable-btn {
+    position: absolute;
+    left: 110px;
+    top: 110px;
+    z-index: 3;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #F4E9CC;
+    background-color: #0a85c1;
+    line-height: 80px;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    text-decoration: none
+}
+
+.turntable-btn::after {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 10px;
+    top: -46px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 30px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #0a85c1
+}
+
+.turntable-btn.disabled {
+    pointer-events: none;
+    background: #B07A7B;
+    color: #cccccc
+}
+
+.turntable-btn.disabled::after {
+    border-bottom-color: #B07A7B
+}
